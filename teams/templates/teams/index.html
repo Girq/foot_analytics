@@ -1,0 +1,143 @@
+<!Doctype html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <!--CSS-->
+    <link href="{% static 'teams/css/style.css' %}" rel="stylesheet">
+
+    <!--Font style-->
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+
+    <title>Football-Analytics</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container-fluid">
+      <div class="parts">
+
+          <h1> Football <span class="red">Analytics</span></h1>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item active"><a class="nav-link" href="#"><a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">About<a></li>
+
+            <li class="nav-item"><a class="nav-link"href="#">Team Statistics<a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Player Statistics<a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Tournament Analytics<a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Predictions<a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacts<a></li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+  </form>
+          </div>
+      </nav>
+
+
+
+      </div>
+      </div>
+   </header>
+
+<section id="acc">
+  <img id="img1" src="{% static 'teams/images/analytics.png' %}" class="img-fluid" alt="Responsive image">
+
+   <div class="container-fluid">
+
+
+      <h1 id="about">Football Data</h1>
+      <p>All about football:
+        Statistics of players and teams in the
+        differnet tournements. Tournements analytics as well as predictions.</p>
+
+        <div class="clear"></div>
+   </div>
+</section>
+
+
+<section id="possibilities">
+  <div class="container-fluid">
+  <div class="wrapper">
+
+      <article id="article1" style="background-image: url('{% static '/teams/images/manutd.jpg' %}');">
+        <div class="overlay">
+          <h4>Teams</h4>
+          <p>Teams statistics in all competitions</p>
+          <a href="#" class="button-2">More Info</a>
+        </div>
+
+      </article>
+
+      <article style="background-image: url('{% static '/teams/images/pogba.jpg' %}');">
+      <div class="overlay">
+        <h4>Players</h4>
+        <p>Players statistics in all competitions</p>
+        <a href="#" class="button-2">More Info</a>
+      </div>
+
+     </article>
+
+     <article style="background-image: url('{% static '/teams/images/pleague1.jpg' %}');">
+       <div class="overlay">
+         <h4>Tournements</h4>
+         <p>Tournement analytics for different teams</p>
+         <a href="#" class="button-2">More Info</a>
+       </div>
+
+     </article>
+
+     <article style="background-image: url('{% static '/teams/images/prediction.jpg' %}');">
+     <div class="overlay">
+       <h4>Predictions</h4>
+       <p>Win the beting with our predictions</p>
+       <a href="#" class="button-2">More Info</a>
+     </div>
+
+    </article>
+
+     <div class="clear"></div>
+
+     </div>
+     </div>
+</section>
+
+
+
+
+
+
+
+
+<footer>
+      <div class="wrapper">
+        <h1>Football <span class="red">Analytics</span></h1>
+        <p class="copyright">Copyright 2019: All rights reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

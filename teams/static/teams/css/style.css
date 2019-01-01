@@ -162,8 +162,11 @@ header nav ul li a {
 /*Footer*/
 
 footer {
-    height: 160px;
+    height: max;
     background-color: #444;
+    margin: 850px 0 0 0;
+    width: auto;
+
 }
 
 footer h1 {
@@ -178,7 +181,7 @@ footer h1 {
       text-align: center;
       font-weight: bold;
       padding-top: 30px;
-      color: #A9A9A9;
+      color: #fff;
 }
 
 /* articles */

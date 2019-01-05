@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-import http.client
-import json
+import requests
 
 # Create your views here.
 
@@ -16,14 +15,18 @@ def foot(request,):
     template = loader.get_template('test1/footdata.html')
 
 
-    connection = http.client.HTTPConnection('api.football-data.org')
+
     headers = {'X-Auth-Token': '06558c656e394bc6ad30546af2801d27'}
 
-    connection.request('GET', '/v2/competitions/PL/teams', None, headers)
 
-    response = json.loads(connection.getresponse().read().decode())
 
-    c = response['teams']
+    URL = 'http://api.football-data.org/v2/competitions/PL/teams'
+
+    r = requests.get(url=URL, headers=headers)
+
+    rr = r.json()['teams']
+
+
     dd=[]
     dc=[]
     da=[]
@@ -31,12 +34,12 @@ def foot(request,):
 
 
 
-    for i in range(len(c)):
+    for i in range(len(rr)):
 
-        dd.append(c[i]['name'])
-        dc.append(c[i]['founded'])
-        da.append(c[i]['website'])
-        dg.append(c[i]['clubColors'])
+        dd.append(rr[i]['name'])
+        dc.append(rr[i]['founded'])
+        da.append(rr[i]['website'])
+        dg.append(rr[i]['clubColors'])
 
 
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foot Data</title>
+    <link href="{% static 'test1/css/style1.css' %}" rel="stylesheet">
+    <style>
+    table, th, td {
+ border: 1px solid black;
+}
+</style>
+</head>
+
+<table class="donne" style="width:100%">
+
+<tr class="don">
+    <th>Name</th>
+    <th>Number</th>
+    <th>Website</th>
+    <th>Club Colors</th>
+
+</tr>
+
+{% for item1, item2, item3, item4 in toto %}
+<tr>
+    <td>{{ item1 }}</td>
+    <td>{{ item2 }}</td>
+    <td>{{ item3 }}</td>
+    <td>{{ item4 }}</td>
+
+
+</tr>
+{% endfor %}
+
+</table>
+
+
+
+</body>
+</html>

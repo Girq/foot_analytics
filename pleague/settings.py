@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'teams.apps.TeamsConfig',
+    'test1.apps.Test1Config',
 ]
 
 MIDDLEWARE = [

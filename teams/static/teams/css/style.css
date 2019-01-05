@@ -58,14 +58,12 @@ a {
     color: #444;
 
 }
-/*
 .parts {
 
-   width: 800px;
+   width: 1000px;
    margin: 20px;
-   padding: 10px 10px;
+   padding: 0;
 }
-*/
 /*header*/
 
 header {
@@ -84,8 +82,8 @@ header h1
 header nav {
 
   float: auto;
-  margin-top: 20px;
-  margin-left: 400px
+  margin-top: 0px;
+
 
 
 }

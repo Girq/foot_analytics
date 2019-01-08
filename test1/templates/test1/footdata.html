@@ -12,7 +12,11 @@
 </style>
 </head>
 
-<table class="donne" style="width:100%">
+<div class="container-fluid">
+    <div class="row">
+        <div>
+
+    <table class="donne" style="width:100%">
 
 <tr class="don">
     <th>Name</th>
@@ -22,7 +26,7 @@
 
 </tr>
 
-{% for item1, item2, item3, item4 in toto %}
+{% for item1, item2, item3, item4 in toto.elem %}
 <tr>
     <td>{{ item1 }}</td>
     <td>{{ item2 }}</td>
@@ -34,7 +38,39 @@
 {% endfor %}
 
 </table>
+            </div>
 
+        <div>
+<table class="donne" style="width:100%">
+
+<tr class="don">
+    <th>Position</th>
+    <th>Teams</th>
+    <th>Points</th>
+
+</tr>
+
+{% for item1, item2, item3 in tata.position %}
+<tr>
+    <td>{{ item1 }}</td>
+    <td>{{ item3 }}</td>
+    <td>{{ item2 }}</td>
+
+
+</tr>
+{% endfor %}
+
+</table>
+            </div>
+
+    </div>
+
+</div>
+
+<h2>{{ picture.name }}</h2>
+
+
+<img src="{% static picture.filename %}"/>
 
 
 </body>

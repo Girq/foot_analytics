@@ -1,18 +1,110 @@
 .bg-1 {
-    background-color: 	#A9A9A9; /* Green */
-    color: #ffffff;
 
-  }
+    padding-top: 20px;
+    background-image: 	linear-gradient(#fff, #800080); /* Green */
+    color: #ffffff;
+    height: 300px;
+
+}
+
+
+.bg-2 {
+
+    background-color: #800080; /* Dark Blue */
+    color: #fff;
+    padding-top: 170px;
+    padding-bottom: 570px;
+
+}
+
+
+.bg-3 {
+
+    background-color: #fff; /* White */
+    color: #555;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+
+}
+/*
+.bg-4 {
+
+    background-color: #fff; *//* White *//*
+    color: #555;
+    padding-bottom: 80px;
+    position:relative;
+    display: inline-block;
+    float:right;*/
+
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+  color: #800080 !important;
+}
+
+
+.bg-3 h3 {
+
+    color: #800080;
+    font-size: 45px;
+}
+
+.bg-3 hr {
+
+        color: #800080;
+
+}
 
 #violet {
 
-    color: #fff;
+    color: #FF00FF;
 }
 
 #tete {
 
   font-family: 'Crete Round', serif;
-  font-size: 45px;
-  color: #000;
+  font-size: 25px;
+  color: #444;
 }
 
+
+#tete h2 {
+
+    text-align: left;
+
+
+
+}
+
+#tete h3 {
+
+     font-size: 25px;
+     margin-top: -10px;
+     color: #FF00FF;
+
+}
+
+#tete img {
+
+
+        margin-top: 45px;
+
+}
+
+#pl {
+
+      font-style: italic;
+
+}

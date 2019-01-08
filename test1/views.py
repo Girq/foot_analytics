@@ -3,6 +3,11 @@ from django.http import HttpResponse
 from django.template import loader
 import requests
 
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
+import numpy as np
+
 # Create your views here.
 
 def test(request):
@@ -14,18 +19,21 @@ def test(request):
 def foot(request,):
     template = loader.get_template('test1/footdata.html')
 
-
+ # Token
 
     headers = {'X-Auth-Token': '06558c656e394bc6ad30546af2801d27'}
 
 
+# Request --> Filter /teams
 
-    URL = 'http://api.football-data.org/v2/competitions/PL/teams'
+    URL1 = 'http://api.football-data.org/v2/competitions/PL/teams'
 
-    r = requests.get(url=URL, headers=headers)
+    r = requests.get(url=URL1, headers=headers)
 
     rr = r.json()['teams']
 
+
+# Premiere Tableau teams PL
 
     dd=[]
     dc=[]
@@ -45,8 +53,76 @@ def foot(request,):
 
     mylist=zip(dd,dc,da,dg)
 
-    ddd={'toto': mylist}
+    #ddd={'toto': mylist}
 
 
-    return HttpResponse(template.render(ddd, request))
+# Histogram
+
+    nor=[]
+    nor1=[]
+    nor2=[]
+
+    for t in range(len(dd)):
+        x = dd[t]
+        j = x.split()
+        nor.append(j)
+
+    for z in nor:
+        nor1.append(z[0])
+
+    for m in nor1:
+        nor2.append(m[0:2])
+
+    f, ax = plt.subplots(1)
+    ax.set_ylim(1870, max(dc))
+    ax.set_xlabel('Teams')
+    ax.set_ylabel('Year of Foundation')
+
+    ax.bar(nor2, dc)
+
+    plt.savefig('/home/grig/PycharmProjects/untitled/test1/static/test1/images/pic.png')
+
+
+# Request --> Filter /standings
+
+    URL2 = 'http://api.football-data.org/v2/competitions/PL/standings'
+
+    a = requests.get(url=URL2, headers=headers)
+
+    aa = a.json()['standings']
+
+    ppp = aa[0]['table']
+
+
+# Classement PL --->
+
+    point = []
+    posit = []
+    clubs = []
+
+    for i in range(len(ppp)):
+        posit.append(ppp[i]['position'])
+        point.append(ppp[i]['points'])
+        clubs.append(ppp[i]['team']['name'])
+
+
+    mylist1=zip(posit, point, clubs)
+
+
+    # Template ---->
+
+    context = {
+
+                'picture': {"name": 'Histograme', 'filename': 'test1/images/pic.png'},
+
+                'toto': {'elem': mylist},
+
+                'tata': {'position': mylist1}
+
+    }
+
+
+
+
+    return HttpResponse(template.render(context, request))
 

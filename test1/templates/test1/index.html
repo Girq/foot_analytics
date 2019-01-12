@@ -94,95 +94,75 @@
 
 
 
-<div class="container-fluid bg-3 text-center">
+<div class="container-fluid text-center">
 
     <h3>Premier League</h3>
     <hr width="%"> <h4>Teams 2018-2019</h4> <hr width="%">
+    <div class="row">
 
-  <div class="row">
-      <div class="col-sm-2">
-      <p>Arsenal</p>
-      <img src="{% static 'test1/images/logos/123px-Arsenal_FC.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Bournemout</p>
-      <img src="{% static 'test1/images/logos/111px-AFC_Bournemout.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Brighton</p>
-      <img src="{% static 'test1/images/logos/145px-Brighton.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Burnley</p>
-      <img src="{% static 'test1/images/logos/125px-Burnley.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Cardiff</p>
-      <img src="{% static 'test1/images/logos/200px-Cardiff_City.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Chelsea</p>
-      <img src="{% static 'test1/images/logos/145px-Chelsea.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Crystal Palace</p>
-      <img src="{% static 'test1/images/logos/170px-CrystalP.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Everton</p>
-      <img src="{% static 'test1/images/logos/142px-Everton.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Leicester City</p>
-      <img src="{% static 'test1/images/logos/145px-LeicesterC.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Liverpool</p>
-      <img src="{% static 'test1/images/logos/108px-Liverpool_FC.png' %}" alt="Image">
-    </div>
-        <div class="col-sm-2">
-      <p>Manchester City</p>
-      <img src="{% static 'test1/images/logos/145px-ManchesterC.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Manchester United</p>
-      <img src="{% static 'test1/images/logos/143px-ManchesterU.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Huddersfield</p>
-      <img src="{% static 'test1/images/logos/96px-Huddersfield.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Southampton</p>
-      <img src="{% static 'test1/images/logos/127px-South.png' %}" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Tottenham Hotspur</p>
-      <img src="{% static 'test1/images/logos/71px-Tottenham.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Fulham</p>
-      <img src="{% static 'test1/images/logos/109px-Fulham_FC.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Newcastle United</p>
-      <img src="{% static 'test1/images/logos/144px-NewcastleU.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Watford</p>
-      <img src="{% static 'test1/images/logos/130px-Watford.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>West Ham</p>
-      <img src="{% static 'test1/images/logos/130px-WestHam.png' %}" alt="Image">
-    </div>
-       <div class="col-sm-2">
-      <p>Wolverhampton</p>
-      <img src="{% static 'test1/images/logos/145px-Wolver.png' %}" alt="Image">
-    </div>
+<div class="col-sm-6">
+<table>
 
-  </div>
+{% for item1 in teamlogo.logo1 %}
+
+
+<tr>
+
+    <img id="logoss" src="{{ item1 }}" height="130" width="130" />
+
+</tr>
+
+{% endfor %}
+
+</table>
 </div>
+
+<div class="col-sm-6">
+
+<table class="table table-bordered table-hover tbody">
+
+<tr id="title">
+    <th>#</th>
+    <th>Team</th>
+    <th>P</th>
+    <th>W</th>
+    <th>D</th>
+    <th>L</th>
+    <th>F</th>
+    <th>A</th>
+    <th>GD</th>
+    <th>Pts</th>
+
+
+</tr>
+
+{% for item1, item2, item3, item4, item5, item6, item7, item8, item9, item10 in tata.position %}
+<tr id="tit">
+
+    <td>{{ item1 }}</td>
+    <td>{{ item2 }}</td>
+    <td>{{ item3 }}</td>
+    <td>{{ item4 }}</td>
+    <td>{{ item5 }}</td>
+    <td>{{ item6 }}</td>
+    <td>{{ item7 }}</td>
+    <td>{{ item8 }}</td>
+    <td>{{ item9 }}</td>
+    <td>{{ item10 }}</td>
+
+
+
+</tr>
+{% endfor %}
+
+</table>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 
 <div class="container-fluid bg-2 text-center">

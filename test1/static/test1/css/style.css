@@ -12,8 +12,8 @@
 
     background-color: #800080; /* Dark Blue */
     color: #fff;
-    padding-top: 170px;
-    padding-bottom: 570px;
+    padding-top: 25px;
+    padding-bottom: 200px;
 
 }
 
@@ -107,4 +107,31 @@
 
       font-style: italic;
 
+}
+
+#title {
+
+    color: black;
+    background-image: linear-gradient(#fff, #800080);
+
+}
+
+
+#tit {
+
+    color: black;
+    background-color: #DDA0DD;
+    font-size: 15px;
+
+}
+
+
+
+.table-hover tbody tr:hover td {
+    background: #BA55D3;
+}
+
+#logoss {
+
+       padding-right: 15px;
 }

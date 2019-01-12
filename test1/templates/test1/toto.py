@@ -68,17 +68,42 @@ ppp=pp[0]['table']
 point=[]
 posit=[]
 clubs=[]
+games=[]
+won=[]
+draw=[]
+lost=[]
+goalfor=[]
+goalag=[]
+goaldif=[]
+logos=[]
 
 for i in range(len(ppp)):
 
         posit.append(ppp[i]['position'])
         point.append(ppp[i]['points'])
         clubs.append(ppp[i]['team']['name'])
+        games.append(ppp[i]['playedGames'])
+        won.append(ppp[i]['won'])
+        draw.append(ppp[i]['draw'])
+        goalfor.append(ppp[i]['goalsFor'])
+        goalag.append(ppp[i]['goalsAgainst'])
+        goaldif.append(ppp[i]['goalDifference'])
+        logos.append(ppp[i]['team']['crestUrl'])
 
-print(posit)
-print(point)
-print(clubs)
 
+
+#print(ppp)
+print(logos)
+
+#print(posit)
+#print(point)
+#print(clubs)
+#print(games)
+#print(won)
+#print(draw)
+#print(goalfor)
+#print(goalag)
+#print(goaldif)
 
 #year=[]
 #nn=[]

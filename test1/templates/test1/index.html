@@ -94,7 +94,7 @@
 
 
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center bg-3">
 
     <h3>Premier League</h3>
     <hr width="%"> <h4>Teams 2018-2019</h4> <hr width="%">
@@ -119,42 +119,46 @@
 
 <div class="col-sm-7">
 
-<table class="table table-bordered table-hover">
+<table class="table table-bordered tb-1">
 
+    <thead>
 <tr id="title">
-    <th>#</th>
-    <th>Team</th>
-    <th>P</th>
-    <th>W</th>
-    <th>D</th>
-    <th>L</th>
+    <th style="width:5px;">#</th>
+    <th style="width:130px;">Team</th>
+    <th style="width:5px;">P</th>
+    <th style="width:5px;">W</th>
+    <th style="width:5px;">D</th>
+    <th style="width:5px;">L</th>
     <!--<th>F</th>
     <th>A</th>-->
-    <th>GD</th>
-    <th>Pts</th>
+    <th style="width:5px;">GD</th>
+    <th style="width:5px;">Pts</th>
 
 
 </tr>
 
-{% for item1, item2, item3, item4, item5, item6, item7, item8, item9, item10 in tata.position %}
-<tr id="tit">
+    </thead>
 
-    <td>{{ item1 }}</td>
-    <td>{{ item2 }}</td>
-    <td>{{ item3 }}</td>
-    <td>{{ item4 }}</td>
-    <td>{{ item5 }}</td>
-    <td>{{ item6 }}</td>
+    <tbody>
+{% for item1, item2, item3, item4, item5, item6, item7, item8, item9, item10 in tata.position %}
+<tr style="height:5%;" id="tit">
+
+    <td style="width:5px;">{{ item1 }}</td>
+    <td style="width:130px;">{{ item2 }}</td>
+    <td style="width:5px;">{{ item3 }}</td>
+    <td style="width:5px;">{{ item4 }}</td>
+    <td style="width:5px;">{{ item5 }}</td>
+    <td style="width:5px;">{{ item6 }}</td>
     <!--<td>{{ item7 }}</td>
     <td>{{ item8 }}</td>-->
-    <td>{{ item9 }}</td>
-    <td>{{ item10 }}</td>
+    <td style="width:5px;">{{ item9 }}</td>
+    <td style="width:5px;">{{ item10 }}</td>
 
 
 
 </tr>
 {% endfor %}
-
+    </tbody>
 </table>
 
         </div>

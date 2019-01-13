@@ -18,12 +18,16 @@
 }
 
 
+
+}
+
+
 .bg-3 {
 
     background-color: #fff; /* White */
     color: #555;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 
 
 
@@ -124,8 +128,6 @@
     font-size: 15px;
 
 }
-
-
 
 
 tr:hover td {

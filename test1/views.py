@@ -68,7 +68,7 @@ def test(request):
     ax.bar(nor2, dc)
 
     #plt.savefig('/home/grig/PycharmProjects/untitled/test1/static/test1/images/pic.png')
-     plt.savefig('/home/Grig117/foot_analytics/test1/static/test1/images/pic.png')
+    plt.savefig('/home/Grig117/foot_analytics/test1/static/test1/images/pic.png')
 
     # Request --> Filter /standings
 

@@ -117,7 +117,7 @@
 }
 
 
-#tit {
+/*#tit {
 
     color: black;
     background-color: #DDA0DD;
@@ -126,8 +126,9 @@
 }
 
 
+*/
 
-.table-hover tbody tr:hover td {
+tr:hover td {
     background: #BA55D3;
 }
 

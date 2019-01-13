@@ -19,7 +19,7 @@
 <body>
 
 <div class="container-fluid bg-1">
-    <div class="row">
+<div class="overflow-scroll-gradient">
 
 <!--
     <div class="col-sm-6 bg-2">
@@ -70,23 +70,26 @@
 
 </tr>
 
+
 {% for item1, item2, item3, item4, item5, item6, item7, item8, item9, item10 in tata.position %}
-<tr id="tit">
 
-    <td>{{ item1 }}</td>
-    <td>{{ item2 }}</td>
-    <td>{{ item3 }}</td>
-    <td>{{ item4 }}</td>
-    <td>{{ item5 }}</td>
-    <td>{{ item6 }}</td>
-    <td>{{ item7 }}</td>
-    <td>{{ item8 }}</td>
-    <td>{{ item9 }}</td>
-    <td>{{ item10 }}</td>
+    <tr id="tit">
+
+        <td>{{ item1 }}</td>
+        <td>{{ item2 }}</td>
+        <td>{{ item3 }}</td>
+        <td>{{ item4 }}</td>
+        <td>{{ item5 }}</td>
+        <td>{{ item6 }}</td>
+        <td>{{ item7 }}</td>
+        <td>{{ item8 }}</td>
+        <td>{{ item9 }}</td>
+        <td>{{ item10 }}</td>
 
 
 
-</tr>
+    </tr>
+
 {% endfor %}
 
 </table>
@@ -132,6 +135,43 @@
         </div>
     </div>
 </div>
+
+<table cellspacing="0" cellpadding="0" border="0" width="325">
+<tr>
+  <td>
+   <table cellspacing="0" cellpadding="1" border="1" width="300" >
+     <tr style="color:white;background-color:grey">
+        <th>Header 1</th>
+        <th>Header 2</th>
+     </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+ <td>
+   <div style="width:320px; height:60px; overflow:auto;">
+     <table cellspacing="0" cellpadding="1" border="1" width="300" >
+       <tr>
+         <td>new item</td>
+         <td>new item</td>
+       </tr>
+       <tr>
+         <td>new item</td>
+         <td>new item</td>
+       </tr>
+       <tr>
+         <td>new item</td>
+         <td>new item</td>
+       </tr>
+       <tr>
+         <td>new item</td>
+         <td>new item</td>
+       </tr>
+     </table>
+   </div>
+  </td>
+ </tr>
+</table>
 
 </body>
 </html>
